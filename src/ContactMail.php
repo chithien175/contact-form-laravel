@@ -29,7 +29,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->from('webdepnhatrang@gmail.com', 'Name From')
+        return $this->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'))
         ->subject('Contact Notification')
         ->view('contacts::email-template');
     }

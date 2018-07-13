@@ -21,7 +21,7 @@ class ContactsController extends Controller
         try {
             $contact = $request->all();
            
-            Mail::to("chithien175@gmail.com")->send(new ContactMail($contact));
+            Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactMail($contact));
             return back()->with('success', 'Cảm ơn bạn đã liên hệ chúng tôi!');
         } catch (Exception $ex) {
             info($ex->getMessage());

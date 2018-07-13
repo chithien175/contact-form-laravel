@@ -13,8 +13,31 @@
 Bạn sẽ cần [Composer](https://getcomposer.org/) để cài đặt gói này, sau đó chạy:
 <pre>composer require thienpham/contacts</pre>
 
+Sau khi cài đặt thành công, sao chép đoạn mã sau vào .env để cấu hình email.
+Lưu ý nhập đúng usename và password để quá trình gửi mail thành công:
+<pre>
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.googlemail.com
+    MAIL_PORT=465
+    MAIL_USERNAME=demo@gmail.com
+    MAIL_PASSWORD=
+    MAIL_ENCRYPTION=ssl
+    MAIL_FROM_ADDRESS=demo@gmail.com
+    MAIL_FROM_NAME="Demo From Name"
+    MAIL_TO_ADDRESS=demo@gmail.com
+</pre>
+
 ## Sử dụng
-Đang cập nhật...
+- Sử dụng route <pre>localhost:8000/contacts</pre> để hiển thị mẫu liên hệ
+
+## Tùy chỉnh giao diện
+
+- Chạy lệnh sau để copy giao diện vào <pre>resources/views</pre>
+<pre>php artisan vendor:publish</pre>
+
+- Để tùy chỉnh giao diện mẫu liên hệ, sửa file <pre>resources/views/vendor/contacts/contact.blade.php</pre>
+
+- Để tùy chỉnh giao diện email, sửa file <pre>resources/views/vendor/contacts/email-template.blade.php</pre>
 
 ## Giấy phép
 
