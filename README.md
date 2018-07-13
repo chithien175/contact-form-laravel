@@ -15,8 +15,8 @@ Bạn sẽ cần [Composer](https://getcomposer.org/) để cài đặt gói nà
     composer require thienpham/contacts
 </pre>
 
-Sau khi cài đặt thành công, sao chép đoạn mã sau vào .env để cấu hình email.
-Lưu ý nhập đúng usename và password để quá trình gửi mail thành công:
+Sau khi cài đặt thành công, sao chép đoạn mã sau vào file `.env` để cấu hình email.
+Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thành công:
 <pre>
     MAIL_DRIVER=smtp
     MAIL_HOST=smtp.googlemail.com
@@ -37,7 +37,7 @@ Lưu ý nhập đúng usename và password để quá trình gửi mail thành c
 
 ## Tùy chỉnh giao diện
 
-- Chạy lệnh sau để copy giao diện vào "resources/views"
+- Chạy lệnh sau để nhân bản giao diện vào `resources/views`
 <pre>
     php artisan vendor:publish
 </pre>
