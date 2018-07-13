@@ -1,0 +1,13 @@
+{
+    "name": "thienpham/contacts",
+    "description": "Support for creating contact templates, send information to email admin.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Thien Pham",
+            "email": "chithien175@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
