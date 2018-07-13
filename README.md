@@ -11,6 +11,9 @@
 Bạn sẽ cần composer để cài đặt gói này, sau đó chạy:
 <pre>composer require thienpham/contacts</pre>
 
+## Sử dụng
+Đang cập nhật...
+
 ## Giấy phép
 
-The thienpham/contacts package là phần mềm nguồn mở được cấp phép theo [MIT license](https://opensource.org/licenses/MIT).
+The **thienpham/contacts** package là phần mềm nguồn mở được cấp phép theo [MIT license](https://opensource.org/licenses/MIT).
