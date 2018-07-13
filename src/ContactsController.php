@@ -9,6 +9,22 @@ class ContactsController extends Controller
 {
     public function index()
     {
-        return 'contact';
+        return view('contacts::contact');
+    }
+
+    public function store(Request $request){
+        // echo "<pre>";
+        // print_r($request->all());
+        // echo "</pre>";
+
+        try {
+            $contact = $request->all();
+           
+            Mail::to(setting('contact.send_to_email'))->send(new ContactEmail($contact));
+            return back()->with('success', 'Cảm ơn bạn đã liên hệ chúng tôi!');
+        } catch (Exception $ex) {
+            info($ex->getMessage());
+            return back()->with('success', 'Quá trình gửi mail lỗi!');
+        }
     }
 }
