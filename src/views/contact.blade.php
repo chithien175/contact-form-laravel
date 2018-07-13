@@ -1,6 +1,12 @@
 <h1>Contact Form</h1>
+@if(Session::has('success'))
+<p>
+    {{ Session::get('success') }}
+</p>
+@endif
 <div class="container">
     <form action="{{ route('store.thienpham.contact') }}" method="post">
+        @csrf
         <input type="text" name="fullname" placeholder="Your fullname..">
         <br>
         <input type="email" name="email" placeholder="Your email..">

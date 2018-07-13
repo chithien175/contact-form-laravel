@@ -4,6 +4,7 @@ namespace ThienPham\Contacts;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactsController extends Controller
 {
@@ -20,7 +21,7 @@ class ContactsController extends Controller
         try {
             $contact = $request->all();
            
-            Mail::to(setting('contact.send_to_email'))->send(new ContactEmail($contact));
+            Mail::to("chithien175@gmail.com")->send(new ContactMail($contact));
             return back()->with('success', 'Cảm ơn bạn đã liên hệ chúng tôi!');
         } catch (Exception $ex) {
             info($ex->getMessage());
