@@ -42,12 +42,12 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
     php artisan vendor:publish
 </pre>
 
-- Để tùy chỉnh giao diện mẫu liên hệ, sửa file:
+- Để tùy chỉnh giao diện mẫu liên hệ, sửa file `contact` theo đường dẫn sau:
 <pre>
     resources/views/vendor/contacts/contact.blade.php
 </pre>
 
-- Để tùy chỉnh giao diện email, sửa file:
+- Để tùy chỉnh giao diện email, sửa file `email-template` theo đường dẫn sau:
 <pre>
     resources/views/vendor/contacts/email-template.blade.php
 </pre>

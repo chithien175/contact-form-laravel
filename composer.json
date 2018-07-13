@@ -9,5 +9,17 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ThienPham\\Contacts\\": "src/"
+        }
+      },
+      "extra": {
+        "laravel": {
+          "providers": [
+            "ThienPham\\Contacts\\ContactsServiceProvider"
+          ]
+        }
+      }
 }
