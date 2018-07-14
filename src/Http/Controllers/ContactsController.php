@@ -1,6 +1,6 @@
 <?php
 
-namespace ThienPham\Contacts;
+namespace ThienPham\Contacts\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,10 +15,6 @@ class ContactsController extends Controller
     }
 
     public function store(Request $request){
-        // echo "<pre>";
-        // print_r($request->all());
-        // echo "</pre>";
-
         try {
             $contact = $request->all();
            
