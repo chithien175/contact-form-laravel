@@ -5,6 +5,7 @@ namespace ThienPham\Contacts;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use ThienPham\Contacts\Mail\ContactMail;
 
 class ContactsController extends Controller
 {

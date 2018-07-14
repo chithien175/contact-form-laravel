@@ -1,6 +1,6 @@
 <?php
 
-namespace ThienPham\Contacts;
+namespace ThienPham\Contacts\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;

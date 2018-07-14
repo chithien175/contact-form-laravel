@@ -1,6 +1,6 @@
 <?php
 
-namespace ThienPham\Contacts;
+namespace ThienPham\Contacts\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,9 +13,9 @@ class ContactsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/views', 'contacts');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'contacts');
         $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/contacts'),
+            __DIR__.'/views' => resource_path('views/vendor/thienpham-contacts'),
         ]);
     }
 
@@ -26,7 +26,7 @@ class ContactsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__.'/routes/web.php';
+        $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         $this->app->make('ThienPham\Contacts\ContactsController');
     }
 }
