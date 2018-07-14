@@ -11,9 +11,9 @@
 ## Cài đặt
 
 Bạn sẽ cần [Composer](https://getcomposer.org/) để cài đặt gói này, sau đó chạy:
-<pre>
-    composer require thienpham/contacts
-</pre>
+```sh
+    $ composer require thienpham/contacts
+```
 
 Sau khi cài đặt thành công, sao chép đoạn mã sau vào file `.env` để cấu hình email.
 Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thành công:
@@ -38,9 +38,9 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
 ## Tùy chỉnh giao diện (Overwrite)
 
 - Chạy lệnh sau để nhân bản giao diện vào `resources/views`
-<pre>
-    php artisan vendor:publish
-</pre>
+```sh
+    $ php artisan vendor:publish
+```
 
 - Để tùy chỉnh giao diện mẫu liên hệ, sửa file `contact` theo đường dẫn sau:
 <pre>
@@ -51,6 +51,10 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
 <pre>
     resources/views/vendor/contacts/email-template.blade.php
 </pre>
+
+## Hình ảnh
+![alt text](https://uphinhnhanh.com/images/2018/07/14/AnhchupManhinh2018-07-14luc08.30.26.png "thienpham/contacts")
+![alt text](https://uphinhnhanh.com/images/2018/07/14/AnhchupManhinh2018-07-14luc08.30.35.png "thienpham/contacts")
 
 ## Giấy phép
 
