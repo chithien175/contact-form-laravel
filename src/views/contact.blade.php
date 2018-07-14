@@ -7,9 +7,9 @@
 <div class="container">
     <form action="{{ route('store.thienpham.contact') }}" method="post">
         @csrf
-        <input type="text" name="fullname" placeholder="Your fullname..">
+        <input type="text" name="fullname" placeholder="Your fullname.." required>
         <br>
-        <input type="email" name="email" placeholder="Your email..">
+        <input type="email" name="email" placeholder="Your email.." required>
         <br>
         <input type="text" name="address" placeholder="Your address..">
         <br>
@@ -17,7 +17,7 @@
         <br>
         <input type="text" name="subject" placeholder="Your subject..">
         <br>
-        <textarea placeholder="Message" name="msg"></textarea>
+        <textarea placeholder="Message" name="msg" required></textarea>
         <br>
         <input type="submit" value="Submit">
     </form>

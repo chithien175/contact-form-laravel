@@ -35,7 +35,7 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
     localhost:8000/contacts
 </pre>
 
-## Tùy chỉnh giao diện
+## Tùy chỉnh giao diện (Overwrite)
 
 - Chạy lệnh sau để nhân bản giao diện vào `resources/views`
 <pre>
