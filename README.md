@@ -1,7 +1,6 @@
 # Contacts Form for Laravel
 
-Đây là gói ứng dụng tạo trang liên hệ nhanh chóng dành cho Laravel:
-- Tạo form liên hệ ngoài frontend.
+Đây là gói ứng dụng dành cho Laravel:
 - Gửi thông tin liên hệ tới email admin.
 
 ## Yêu cầu
@@ -30,9 +29,9 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
 </pre>
 
 ## Sử dụng
-- Sử dụng route sau để hiển thị mẫu liên hệ:
+- Sử dụng route sau để gửi mail từ `from` liên hệ:
 <pre>
-    localhost:8000/contacts
+    <form action="{{ route('store.thienpham.contact') }}" method="post">
 </pre>
 
 ## Tùy chỉnh giao diện (Overwrite)
@@ -42,14 +41,9 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
     $ php artisan vendor:publish
 ```
 
-- Để tùy chỉnh giao diện mẫu liên hệ, sửa file `contact` theo đường dẫn sau:
-<pre>
-    resources/views/vendor/contacts/contact.blade.php
-</pre>
-
 - Để tùy chỉnh giao diện email, sửa file `email-template` theo đường dẫn sau:
 <pre>
-    resources/views/vendor/contacts/email-template.blade.php
+    resources/views/vendor/thienpham-contacts/email-template.blade.php
 </pre>
 
 ## Hình ảnh

@@ -1,10 +1,7 @@
 <?php
-use ThienPham\Contacts\Http\Controllers\ContactsController;
-
-Route::get('contacts', [ 
-	'uses' => 'ThienPham\Contacts\Http\Controllers\ContactsController@index'
-]);
-Route::post('contacts', [
-	'uses' => 'ThienPham\Contacts\Http\Controllers\ContactsController@store',
-	'as'	=> 'store.thienpham.contact'
-]);
+Route::group(['middleware' => ['web']], function () {
+	Route::post('contacts', [
+		'uses' => 'ThienPham\Contacts\Http\Controllers\ContactsController@contactStore',
+		'as'	=> 'store.thienpham.contact'
+	]);
+});
