@@ -15,7 +15,7 @@ class ContactsServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'contacts');
         $this->publishes([
-            __DIR__.'/../../resources/views' => resource_path('views/vendor/thienpham-contacts'),
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/contacts'),
         ]);
     }
 
