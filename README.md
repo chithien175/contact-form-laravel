@@ -29,9 +29,9 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
 </pre>
 
 ## Sử dụng
-- Sử dụng route sau để gửi mail từ `from` liên hệ:
+- Áp dụng `action` và `method` sau vào `from` liên hệ:
 <pre>
-    <form action="{{ route('store.thienpham.contact') }}" method="post">
+    action="{{ route('store.thienpham.contact') }}" method="post"
 </pre>
 
 ## Tùy chỉnh giao diện (Overwrite)
