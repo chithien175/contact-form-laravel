@@ -1,6 +1,6 @@
 {
     "name": "thienpham/contacts",
-    "description": "Support for creating contact templates, send information to email admin.",
+    "description": "Hỗ trợ gửi nội dung liên hệ đến email admin",
     "type": "library",
     "authors": [
         {
