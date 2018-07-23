@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/thienpham/contacts/v/stable)](https://packagist.org/packages/thienpham/contacts)
+[![Total Downloads](https://poser.pugx.org/thienpham/contacts/downloads)](https://packagist.org/packages/thienpham/contacts)
+[![Latest Unstable Version](https://poser.pugx.org/thienpham/contacts/v/unstable)](https://packagist.org/packages/thienpham/contacts)
+[![License](https://poser.pugx.org/thienpham/contacts/license)](https://packagist.org/packages/thienpham/contacts)
+
 # Contacts Form for Laravel
 
 Đây là gói ứng dụng dành cho Laravel:
