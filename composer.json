@@ -1,5 +1,5 @@
 {
-    "name": "thienpham-contacts",
+    "name": "thienpham/contacts",
     "description": "Hỗ trợ gửi nội dung liên hệ đến email admin",
     "keywords": [
         "laravel",
