@@ -32,6 +32,7 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
     MAIL_FROM_NAME="Demo From Name"
     MAIL_TO_ADDRESS=demo@gmail.com
 </pre>
+Thực hiện lệnh `php artisan config:clear` để làm mới cấu hình mail
 
 ## Sử dụng
 - Áp dụng `action` và `method` sau vào `from` liên hệ:
