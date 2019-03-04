@@ -39,6 +39,8 @@ Thực hiện lệnh `php artisan config:clear` để làm mới cấu hình mai
 <pre>
     action="{{ route('store.thienpham.contact') }}" method="post"
 </pre>
+- Code mẫu:
+![alt text](https://uphinhnhanh.com/images/2019/03/04/code-mau.png "thienpham/contacts")
 
 ## Tùy chỉnh giao diện (Overwrite)
 
