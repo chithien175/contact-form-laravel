@@ -14,13 +14,15 @@
 
 ## Cài đặt
 
-Bạn sẽ cần [Composer](https://getcomposer.org/) để cài đặt gói này, sau đó chạy:
+- Bạn sẽ cần [Composer](https://getcomposer.org/) để cài đặt gói này, sau đó chạy:
 ```sh
     $ composer require thienpham/contacts
 ```
 
-Sau khi cài đặt thành công, sao chép đoạn mã sau vào file `.env` để cấu hình email.
-Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thành công:
+- Sau khi cài đặt thành công, sao chép đoạn mã sau vào file `.env` để cấu hình email.
+- Lưu ý:
+- `MAIL_CONTACT_CAPTCHA=TRUE` để sử dụng Captcha.
+- Nhập đúng `MAIL_USERNAME` và `MAIL_PASSWORD` để quá trình gửi mail thành công.
 <pre>
     MAIL_DRIVER=smtp
     MAIL_HOST=smtp.googlemail.com
@@ -31,6 +33,7 @@ Lưu ý nhập đúng `usename` và `password` để quá trình gửi mail thà
     MAIL_FROM_ADDRESS=demo@gmail.com
     MAIL_FROM_NAME="Demo From Name"
     MAIL_TO_ADDRESS=demo@gmail.com
+    MAIL_CONTACT_CAPTCHA=TRUE
 </pre>
 Thực hiện lệnh `php artisan config:clear` để làm mới cấu hình mail
 
@@ -39,10 +42,65 @@ Thực hiện lệnh `php artisan config:clear` để làm mới cấu hình mai
 <pre>
     action="{{ route('store.thienpham.contact') }}" method="post"
 </pre>
-- Code mẫu:
-![alt text](https://uphinhnhanh.com/images/2019/03/04/code-mau.png "thienpham/contacts")
+##Code mẫu form liên hệ:
+<pre>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @if (session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @elseif (session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+            </div>
+        </div>
+        <form action="{{ route('store.thienpham.contact') }}" method="post">
+            @csrf
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Họ tên</label>
+                        <input class="form-control" type="text" name="fullname">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input class="form-control" type="text" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label>Điện thoại</label>
+                        <input class="form-control" type="text" name="phone">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Chủ đề</label>
+                        <input class="form-control" type="text" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung</label>
+                        <textarea class="form-control" rows="8" name="msg"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Kiểm tra captcha -->
+                {!! renderCheckCaptcha(env('MAIL_CONTACT_CAPTCHA')) !!}
+                <!-- Kết thúc Kiểm tra captcha -->
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Gửi</button>
+        </form>
+    </div>
+</pre>
 
-## Tùy chỉnh giao diện (Overwrite)
+## Tùy chỉnh giao diện gửi email (Overwrite)
 
 - Chạy lệnh sau để nhân bản giao diện vào `resources/views`
 ```sh

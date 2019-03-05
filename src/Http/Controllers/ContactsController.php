@@ -12,12 +12,21 @@ class ContactsController extends Controller
     public function contactStore(Request $request){
         try {
             $contact = $request->all();
-           
-            Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactMail($contact));
-            return redirect()->back()->with('success', 'Cảm ơn bạn đã liên hệ chúng tôi!');
+            if(env('MAIL_CONTACT_CAPTCHA') == TRUE){
+                if($contact['correctsum'] == $contact['captcha']){
+                    Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactMail($contact));
+                    return redirect()->back()->with('success', 'Cảm ơn bạn đã liên hệ chúng tôi!');
+                }else{
+                    return redirect()->back()->with('error', 'Captcha không đúng, vui lòng nhập lại!');
+                }
+            }else{
+                Mail::to(env('MAIL_TO_ADDRESS'))->send(new ContactMail($contact));
+                return redirect()->back()->with('success', 'Cảm ơn bạn đã liên hệ chúng tôi!');
+            }
+            
         } catch (Exception $ex) {
             info($ex->getMessage());
-            return redirect()->back()->with('success', 'Gửi mail không thành công, vui lòng thử lại!');
+            return redirect()->back()->with('error', 'Gửi mail không thành công, vui lòng thử lại!');
         }
     }
 }

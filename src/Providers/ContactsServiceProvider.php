@@ -27,6 +27,6 @@ class ContactsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
-        // $this->app->make('ThienPham\Contacts\Http\Controllers\ContactsController');
+        require_once(__DIR__.'/../../src/Helpers/helpers.php');
     }
 }
