@@ -44,8 +44,11 @@ Thực hiện lệnh `php artisan config:clear` để làm mới cấu hình mai
 </pre>
 - Sử dụng `renderCheckCaptcha(env('MAIL_CONTACT_CAPTCHA'))` nếu dùng Captcha
 
-##Code mẫu form liên hệ:
+## Code mẫu form liên hệ:
 - Vào đường dẫn bên dưới để xem code mẫu form liên hệ:
+<pre>
+    root/vendor/thienpham/contacts/resources/views/contact-form-template.php
+</pre>
 
 ## Tùy chỉnh giao diện gửi email (Overwrite)
 - Chạy lệnh sau để nhân bản giao diện vào `resources/views`
@@ -58,7 +61,6 @@ Thực hiện lệnh `php artisan config:clear` để làm mới cấu hình mai
 </pre>
 
 ## Hình ảnh
-![alt text](https://uphinhnhanh.com/images/2018/07/14/AnhchupManhinh2018-07-14luc08.30.35.png "thienpham/contacts")
 ![alt text](https://uphinhnhanh.com/images/2018/07/14/AnhchupManhinh2018-07-14luc08.30.35.png "thienpham/contacts")
 
 ## Giấy phép
